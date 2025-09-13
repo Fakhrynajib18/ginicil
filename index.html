@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Linktree Clone</title>
+    <link rel="icon" type="image/jpg" href="logo.jpg">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Profile Section -->
+        <div class="profile text-center py-5">
+            <img src="logo.jpg" alt="Profile Picture" class="rounded-circle profile-img mb-2" id="profile-pic">
+            <h2 class="profile-name mb-1">BUTUHMINECRAFT</h2>
+            <p class="profile-subtitle">Solusi Kebutuhan Minecraftmu</p>
+            <div class="profile-social">
+                <a href="https://wa.me/+6281259426603" target="_blank" class="social-icon" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://whatsapp.com/channel/0029VbAlTUQ59PwXCymH7m31" target="_blank" class="social-icon" title="WhatsApp Channel">
+                    <i class="fab fa-whatsapp"></i>
+                    <span class="channel-badge">CH</span>
+                </a>
+                <a href="https://www.instagram.com/butuhminecraft?igsh=NTFvNWpzdmdvZXc4" target="_blank" class="social-icon" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:contact@butuhminecraft.com" class="social-icon" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Tabs Navigation -->
+        <ul class="nav nav-pills nav-justified mb-4" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="minecraft-btn active" id="links-tab" data-bs-toggle="pill" data-bs-target="#links" type="button" role="tab">
+                    <i class="fas fa-link me-2"></i>Links
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="minecraft-btn" id="shop-tab" data-bs-toggle="pill" data-bs-target="#shop" type="button" role="tab">
+                    <i class="fas fa-store me-2"></i>Marketplace
+                </button>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="myTabContent">
+            <!-- Links Tab -->
+            <div class="tab-pane fade show active" id="links" role="tabpanel">
+                <div class="link-grid">
+                    <a href="https://wa.me/+6281259426603" class="link-item" target="_blank">
+                        <i class="fab fa-whatsapp me-2"></i> Admin Alviano (order)
+                    </a>
+                    <a href="https://whatsapp.com/channel/0029VbAlTUQ59PwXCymH7m31" class="link-item" target="_blank">
+                        <i class="fab fa-whatsapp me-2"></i> WhatsApp Channel
+                        <span class="channel-badge">CH</span>
+                    </a>
+                    <a href="https://www.instagram.com/butuhminecraft?igsh=NTFvNWpzdmdvZXc4" class="link-item" target="_blank">
+                        <i class="fab fa-instagram me-2"></i> Instagram
+                    </a>
+                    <a href="https://discord.gg/Y5rJGpsSsK" class="link-item" target="_blank">
+                        <i class="fab fa-discord me-2"></i> Join Discord Server
+                    </a>
+                </div>
+            </div>
+
+            <!-- Marketplace Tab -->
+            <div class="tab-pane fade" id="shop" role="tabpanel">
+                <div class="shop-content">
+                    <h4 class="text-center mb-4">Marketplace</h4>
+                    <div class="product-grid">
+                        <!-- Product 1 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="1.jpg" alt="Product 1" class="product-img">
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-title">Minecraft Bedrock</h5>
+                                <p class="product-price">Rp 10.000</p>
+                                <a href="https://wa.me/p/24523905657269677/+6281259426603" class="btn-buy" target="_blank">Order Now</a>
+                            </div>
+                        </div>
+                        <!-- Product 2 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="2.jpg" alt="Product 2" class="product-img">
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-title">McWin10 Bedrock</h5>
+                                <p class="product-price">Rp 40.000</p>
+                                <a href="https://wa.me/p/25606635202256576/+6281259426603" class="btn-buy" target="_blank">Order Now</a>
+                            </div>
+                        </div>
+                        <!-- Product 3 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="3.jpg" alt="Product 3" class="product-img">
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-title">Minecraft Java</h5>
+                                <p class="product-price">Rp 40.000</p>
+                                <a href="https://wa.me/p/24389509774043377/+6281259426603" class="btn-buy" target="_blank">Order Now</a>
+                            </div>
+                        </div>
+                        <!-- Product 4 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="4.jpg" alt="Minecraft Socks" class="product-img">
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-title">Akun Pojav</h5>
+                                <p class="product-price">Rp 40.000</p>
+                                <a href="https://wa.me/p/31359002830381061/+6281259426603" class="btn-buy" target="_blank">Order Now</a>
+                            </div>
+                        </div>
+                        <!-- Product 5 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="5.jpg" alt="Minecraft Backpack" class="product-img">
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-title">Server Mcpe</h5>
+                                <p class="product-price">Rp 5.000</p>
+                                <a href="https://wa.me/p/24408170008826081/+6281259426603" class="btn-buy" target="_blank">Order Now</a>
+                            </div>
+                        </div>
+                        <!-- Product 6 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="6.jpg" alt="Creeper Phone Case" class="product-img">
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-title">Realm Mcpe</h5>
+                                <p class="product-price">Rp 28.000</p>
+                                <a href="https://wa.me/p/24347317634939419/+6281259426603" class="btn-buy" target="_blank">Order Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-3 mt-4">
+        <p>© 2022 cyberdigitalshop to butuhminecraft</p>
+    </footer>
+
+    <!-- Cloud Elements -->
+    <div class="clouds">
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+        <div class="cloud cloud-4"></div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <!-- Custom CSS for Clouds -->
+    <link rel="stylesheet" href="clouds.css">
+    <!-- Custom JS -->
+    <script src="script.js" defer></script>
+</body>
+</html>

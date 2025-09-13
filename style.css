@@ -1,0 +1,639 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #6366f1;
+    --secondary-color: #4f46e5;
+    --dark-color: #1e293b;
+    --light-color: #f8fafc;
+    --text-color: #334155;
+    --border-radius: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Minecraft-themed variables */
+:root {
+    --mc-grass: #5B8C3A;
+    --mc-dirt: #8B5A2B;
+    --mc-stone: #808080;
+    --mc-wood: #8B4513;
+    --mc-water: #3A5FCD;
+    --mc-sky: #7EC0EE;
+    --mc-text: #F0F0F0;
+    --mc-text-dark: #4A4A4A;
+}
+
+body {
+    font-family: 'Minecraft', 'Poppins', sans-serif;
+    background-color: #7EC0EE; /* Minecraft sky blue */
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    min-height: 100vh;
+    color: var(--mc-text);
+    line-height: 1.6;
+    padding: 20px 0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Add Minecraft font */
+@font-face {
+    font-family: 'Minecraft';
+    src: url('https://fonts.cdnfonts.com/css/minecraft-4') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Add grass block pattern at the bottom */
+body::after {
+    content: '';
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: 
+        linear-gradient(0deg, var(--mc-dirt) 0%, var(--mc-grass) 20%, var(--mc-grass) 100%),
+        url('https://www.minecraft.net/content/dam/minecraft/touchup/2020/mars-article/mars-article-hero-1200x600.jpg') bottom/cover;
+    background-blend-mode: multiply;
+    z-index: -1;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Profile Section */
+.profile {
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 0 #000;
+}
+
+.profile-name {
+    color: #FFD700; /* Minecraft gold color */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.profile-bio {
+    color: #FFF;
+    font-weight: 500;
+}
+
+.profile-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    color: white;
+    font-size: 22px;
+    position: relative;
+    transition: all 0.3s ease;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-icon:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    filter: brightness(1.1);
+}
+
+/* WhatsApp */
+.social-icon[title="WhatsApp"] {
+    color: #fff;
+    background-color: #25D366;
+    border-color: #128C7E;
+}
+
+/* WhatsApp Channel */
+.social-icon[title="WhatsApp Channel"] {
+    color: #fff;
+    background-color: #25D366;
+    border-color: #128C7E;
+    padding-right: 10px;
+}
+
+.channel-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #FFD700;
+    color: #000;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+
+/* Instagram */
+.social-icon[title="Instagram"] {
+    color: #fff;
+    border-color: #E1306C;
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+    background-size: 400% 400%;
+    animation: gradient 3s ease infinite;
+}
+
+/* Email */
+.social-icon[title="Email"] {
+    color: #fff;
+    background-color: #EA4335;
+    border-color: #D33426;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-name {
+    font-weight: 700;
+    color: var(--dark-color);
+    margin: 10px 0 2px;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 0 #00000033;
+}
+
+.profile-subtitle {
+    color: #f0f0f0;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.2);
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 10px;
+}
+
+.profile-bio {
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+/* Minecraft Tabs */
+.nav-pills {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.1);
+    border: 2px solid #8B8B8B;
+    border-radius: 0;
+    justify-content: space-between;
+}
+
+.nav-item {
+    flex: 1;
+    text-align: center;
+    margin: 0 2px;
+}
+
+.nav-item:first-child {
+    margin-left: 0;
+}
+
+.nav-item:last-child {
+    margin-right: 0;
+}
+
+.minecraft-btn {
+    font-family: 'Minecraft', sans-serif;
+    background: #8B8B8B;
+    color: #FFF !important;
+    border: 2px solid #000;
+    padding: 10px 0;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0 #000;
+    box-shadow: 2px 2px 0 #000;
+    transition: all 0.1s ease;
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.minecraft-btn:hover {
+    background: #9E9E9E;
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px 0 #000;
+}
+
+.minecraft-btn:active {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0 #000;
+}
+
+.minecraft-btn.active,
+.nav-pills .minecraft-btn.active {
+    background: #4CAF50 !important;
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0 #000 !important;
+    color: #FFF !important;
+}
+
+.minecraft-btn i {
+    margin-right: 8px;
+    font-size: 0.9em;
+}
+
+/* Link Grid */
+.link-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 2rem;
+}
+
+.link-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 4px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+    border: 2px solid #000;
+    text-shadow: none;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.link-item:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.link-item i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 12px;
+    font-size: 1.1rem;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.link-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-color: currentColor;
+}
+
+/* Social Media Brand Colors */
+.link-item[href*="whatsapp"] i,
+.link-item[href*="wa.me"] i {
+    background-color: #25D366;
+    border: 2px solid #25D366;
+}
+
+.link-item[href*="instagram"] i {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+    border: 2px solid #E1306C;
+}
+
+.link-item[href*="youtube"] i {
+    background-color: #FF0000;
+    border: 2px solid #FF0000;
+}
+
+.link-item[href*="twitter"] i,
+.link-item[href*="x.com"] i {
+    background-color: #1DA1F2;
+    border: 2px solid #1DA1F2;
+}
+
+.link-item[href*="github"] i {
+    background-color: #333;
+    border: 2px solid #333;
+}
+
+.link-item[href*="linkedin"] i {
+    background-color: #0077B5;
+    border: 2px solid #0077B5;
+}
+
+.link-item[href*="facebook"] i {
+    background-color: #1877F2;
+    border: 2px solid #1877F2;
+}
+
+.link-item[href*="tiktok"] i {
+    background-color: #000000;
+    border: 2px solid #000000;
+}
+
+.link-item[href*="telegram"] i {
+    background-color: #0088cc;
+    border: 2px solid #0088cc;
+}
+
+.link-item[href*="discord"] i {
+    background-color: #5865F2;
+    border: 2px solid #5865F2;
+}
+
+.link-item i {
+    font-size: 1.2rem;
+    margin-right: 8px;
+}
+
+/* Tab Content */
+.tab-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 3px solid #000;
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.2);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+    min-height: 300px;
+}
+
+.about-content, .contact-content {
+    background-color: #f8fafc;
+    border-radius: var(--border-radius);
+    padding: 20px;
+}
+
+.about-content h4, .contact.shop-content h4 {
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0 #000;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    color: #FFF;
+    font-size: 0.85rem;
+    text-shadow: 1px 1px 0 #000;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+}
+
+/* Shop Tab */
+.shop-content {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 3px solid #8B8B8B;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    margin-top: 15px;
+    padding: 20px;
+}
+
+.shop-content h4 {
+    color: #fff;
+    text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000, 2px 2px 5px #000;
+    margin-bottom: 20px;
+}
+
+.shop-content > p {
+    color: #fff;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 0 1px 0 #000, 1px 0 0 #000, 0 -1px 0 #000, -1px 0 0 #000, 1px 1px 3px #000;
+    margin-bottom: 10px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.product-card {
+    background: #fff;
+    border: 2px solid #8B8B8B;
+    border-radius: 0;
+    transition: all 0.2s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 380px; /* Set a minimum height for all cards */
+}
+
+.product-image {
+    background: #f5f5f5;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 15px;
+    background: #fff;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push button to bottom */
+}
+
+.product-title {
+    min-height: 2.8em; /* Ensure title takes up consistent space */
+    margin: 0 0 10px 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.btn-buy {
+    margin-top: auto; /* Push button to bottom */
+    width: 100%;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 8px 15px;
+}
+
+
+.product-price {
+    font-size: 1.2rem;
+    color: #2E7D32;
+    font-weight: 700;
+    margin: 0 0 8px 0; /* Reduced from 15px to 8px */
+}
+
+.btn-buy {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid #2E7D32;
+    transition: all 0.2s ease;
+    margin-top: auto;
+    text-transform: uppercase;
+    font-family: 'Minecraft', sans-serif;
+}
+
+.btn-buy:hover {
+    background: #43A047;
+    transform: translateY(-2px);
+}
+
+.btn-buy:active {
+    transform: translateY(1px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* Show 2 products per row */
+        gap: 10px;
+    }
+    
+    .product-image {
+        height: 150px;
+    }
+}
+
+/* Adjust for very small screens */
+@media (max-width: 400px) {
+    .product-grid {
+        gap: 8px;
+    }
+    
+    .product-info {
+        padding: 10px;
+    }
+    
+    .product-title {
+        font-size: 0.9rem;
+    }
+    
+    .product-price {
+        font-size: 0.9rem;
+    }
+    
+    .btn-buy {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Removed duplicate .product-card rules */
+
+.product-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.2) !important;
+}
+
+.product-title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #2d3436;
+}
+
+.product-price {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 8px 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .nav-pills .nav-link {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .tab-content {
+        padding: 15px;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.tab-pane {
+    animation: fadeIn 0.3s ease-out;
+}
